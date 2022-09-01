@@ -13,7 +13,7 @@ def show_catalog(request):
 
     # сортировка каталога по цене
     if sort_pages == 'max_price':
-        phone_objects = phone_objects.order_by('price').reverse()
+        phone_objects = phone_objects.order_by('-price')
     elif sort_pages == 'min_price':
         phone_objects = phone_objects.order_by('price')
     elif sort_pages == 'name':
